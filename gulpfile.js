@@ -83,8 +83,14 @@ const imagesToMobileWebp = () =>
 export const assets = () =>
   gulp.src(paths.assets.src).pipe(gulp.dest(paths.assets.dest));
 
-// Очистка
-export const clean = () => deleteAsync(['dist']);
+// Очистка БЕЗ удаления папки videos
+export const clean = () => deleteAsync([
+  'dist/**',
+  '!dist',
+  '!dist/assets',
+  '!dist/assets/videos/**',
+  '!dist/assets/videos'
+]);
 
 // Сервер
 export const serve = () => {

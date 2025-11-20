@@ -2,7 +2,9 @@
     background-color: white;
     width: 100%;
     height: 105px;
-    align-items: center;
+    display: flex;
+    align-items: center; /* теперь работает */
+    justify-content: center; /* центрирование по горизонтали */
     text-align: center;
 }
 .title h1{

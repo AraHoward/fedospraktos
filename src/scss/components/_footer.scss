@@ -3,15 +3,39 @@ footer{
     display: flex;
     flex-direction: column;
     padding: 10px 100px;
-    background-color: black;
+    background-color: #1E1E1E;
+    align-items: center;
     color: white;
+}
+.main-navigate{
+    display: flex;
+    gap: 110px;
+    width: 1240px;
 }
 .navigate{
     display: flex;
+    // align-items: ;
     flex-direction: column;
     gap: 15px;
 }
-// footer svg{
-//     align-items: start;
-//     margin: 0px 10px;
-// }
+
+footer p{
+    font-family: "Open Sans", serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+footer h1{
+    font-family: "Open Sans", serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+
+.text{
+    width: 1240px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

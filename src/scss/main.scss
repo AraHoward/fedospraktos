@@ -8,13 +8,13 @@
 
 // ==== 4. Components ====
 @use 'components/header';
-@use 'components/main_one';
 @use 'components/hero';
 @use 'components/title';
 @use 'components/about';
 @use 'components/advantages';
 @use 'components/fotozone';
 @use 'components/button_only';
+@use 'components/otziv';
 @use 'components/footer';
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
@@ -25,6 +25,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.foto-main{
+    height: auto;
+    width: 1240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.own-block{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  width: 1240px;
+  align-items: center;
+  margin: 0 auto;
+}
+
 
 // h1{
 //   font-family: Alegreya;
