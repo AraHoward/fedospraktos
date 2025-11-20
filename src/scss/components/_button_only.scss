@@ -1,0 +1,17 @@
+.button-only {
+    background: black;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 15px;
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+    font-size: 20px;
+    max-width: 400px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center; /* Вертикальное выравнивание */
+    justify-content: center; /* Горизонтальное выравнивание */
+}

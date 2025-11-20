@@ -1,0 +1,17 @@
+footer{
+    height: 285px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 100px;
+    background-color: black;
+    color: white;
+}
+.navigate{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+// footer svg{
+//     align-items: start;
+//     margin: 0px 10px;
+// }
