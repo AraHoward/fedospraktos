@@ -1,0 +1,22 @@
+.img-stydi{
+    height: 500px;
+    width: 1200px;
+    background-image: url('../images/stydi.webp'); /* Добавьте ../ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-text-two h2{
+    font-family: "Open Sans", serif;
+    font-weight: 300;
+    font-size: 27px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.main-two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

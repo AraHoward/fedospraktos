@@ -1,0 +1,38 @@
+.black-main{
+    height: auto;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+}
+.advantages-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+.advantages-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 5px;
+    height: auto;
+    width: 375px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.advantages-card h1{
+    font-family: "Alegreya", serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+.advantages-card h2{
+    font-family: "Open Sans", serif;
+    font-weight: 300;
+    font-size: 16px;
+}
