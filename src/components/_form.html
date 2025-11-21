@@ -1,0 +1,32 @@
+<div class="forma">
+    <div class="text-forma" style="padding: 30px;">
+        <h1>
+            Мы всегда в поиске талантливых и увлеченных людей. <br>
+            Если вы чувствуете, что ваше место — в творческой атмосфере, заполните форму ниже!
+        </h1>
+    <form class="form-input">
+        <div>
+            <input class="form-group" type="text" id="name" name="name" placeholder="Ваше имя" required>
+        </div>
+        <div>
+            <input class="form-group" type="tel" id="phone" name="phone" 
+                placeholder="Номер телефона" 
+                pattern="[\+][7]\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                title="Формат: +7 (999) 999-99-99"
+                required>
+        </div>
+        <div class="checkbox-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="agreement" name="agreement" required >
+                <span class="checkmark"></span>
+                Я согласен(а) на обработку моих персональных данных
+            </label>
+        </div>
+        <div class="button-container">
+            <button type="submit" class="button-yellow">Отправить заявку</button>
+        </div>
+    </form>
+    </div>
+    <div class="foto-forma">
+    </div>
+</div>

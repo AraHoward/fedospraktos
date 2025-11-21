@@ -1,0 +1,120 @@
+.forma {
+    background-color: #F2F2F2;
+    width: 1240px;
+    height: auto;
+    display: flex;
+    border-radius: 15px;
+}
+
+.forma h1 {
+    width: 500px;
+    font-family: "Open Sans", serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.text-forma{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-container {
+    width: 500px;
+}
+
+.button-container .button-yellow {
+    width: 100%;
+    margin: 0;
+}
+
+.foto-forma{
+    height: auto;
+    width: 100%;
+    background-image: url(/assets/images/fotoforma.webp);
+    background-size: cover; // Заполняет блок
+    background-position: center; // Центрирует изображение
+    background-repeat: no-repeat;
+    border-radius: 0px 15px 15px 0px; // Закругление только сверху
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group{
+    text-align: start;
+    padding-left: 10px;
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px #1E1E1E;
+    background: white;
+}
+
+.form-group ::placeholder{
+    color: #1E1E1E
+}
+
+.checkbox-group {
+    margin: 10px 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "Open Sans", serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--text-color, #000000);
+    cursor: pointer;
+    line-height: 1.4;
+    width: 500px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #CCCCCC;
+    border-radius: 50%; /* Делаем круглым */
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    background: var(--bg-color, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Состояние при наведении */
+.checkbox-label:hover .checkmark {
+    border-color: #FEC902;
+}
+
+/* Состояние когда чекбокс отмечен */
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+    border-color: #FEC902;
+    background: #FEC902;
+}
+
+/* Маленький кружок внутри когда отмечено */
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--text-color, #000000);
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Фокус состояние для доступности */
+.checkbox-label input[type="checkbox"]:focus + .checkmark {
+    box-shadow: 0 0 0 3px rgba(254, 201, 2, 0.3);
+}
