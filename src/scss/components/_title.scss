@@ -13,3 +13,64 @@
     font-weight: 800;
     padding: 20px 0px;
 }
+
+/* ===== TABLET: 768–1279px ===== */
+@media (max-width: 1279px) and (min-width: 768px) {
+    .title {
+        height: 90px;
+    }
+    
+    .title h1 {
+        font-size: 40px;
+        padding: 18px 0px;
+    }
+}
+
+/* ===== MOBILE: 480–767px ===== */
+@media (max-width: 767px) and (min-width: 480px) {
+    .title {
+        height: 80px;
+    }
+    
+    .title h1 {
+        font-size: 32px;
+        padding: 16px 0px;
+        font-weight: 700;
+    }
+}
+
+/* ===== SMALL MOBILE: ≤479px ===== */
+@media (max-width: 479px) {
+    .title {
+        height: 70px;
+    }
+    
+    .title h1 {
+        font-size: 28px;
+        padding: 14px 0px;
+        font-weight: 700;
+    }
+}
+
+/* ===== LARGE DESKTOP: ≥1280px ===== */
+@media (min-width: 1280px) {
+    .title {
+        height: 105px;
+    }
+    
+    .title h1 {
+        font-size: 48px;
+        padding: 20px 0px;
+    }
+}
+
+/* ===== EXTRA LARGE DESKTOP: ≥1440px ===== */
+@media (min-width: 1440px) {
+    .title {
+        height: 110px;
+    }
+    
+    .title h1 {
+        font-size: 52px;
+    }
+}

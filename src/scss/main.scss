@@ -31,21 +31,21 @@
 }
 
 a {
-    color: inherit; /* наследует цвет от родителя */
-    text-decoration: none; /* убираем подчеркивание */
+    color: inherit;
+    text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
 }
 
 /* Состояние при наведении */
 a:hover {
-    color: #FEC902; /* желтый цвет при наведении */
+    color: #FEC902;
 }
 
 /* Состояние при нажатии */
 a:active {
-    color: #E6B500; /* более темный желтый */
-    transform: translateY(1px); /* эффект нажатия */
+    color: #E6B500;
+    transform: translateY(1px);
 }
 
 /* Состояние при фокусе (для доступности) */
@@ -66,13 +66,16 @@ a:focus-visible {
     border-radius: 2px;
 }
 
+/* ===== БАЗОВЫЕ АДАПТИВНЫЕ СТИЛИ ===== */
 .foto-main{
     height: auto;
-    width: 1240px;
+    width: 100%;
+    max-width: 1240px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .own-block{
@@ -80,12 +83,138 @@ a:focus-visible {
   flex-direction: column;
   gap: 30px;
   height: auto;
-  width: 1240px;
+  width: 100%;
+  max-width: 1240px;
   align-items: center;
   margin: 0 auto;
+  padding: 0 20px;
 }
+
 .block-about-page{
   display: flex;
   flex-direction: column;
   gap: 50px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== АДАПТИВНЫЕ СТИЛИ ДЛЯ КНОПКИ ===== */
+.button-yellow {
+    background: #FEC902;
+    color: black;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 15px;
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    min-width: 200px;
+}
+
+/* Состояние при наведении */
+.button-yellow:hover {
+    background: #E6B500;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(254, 201, 2, 0.3);
+}
+
+/* Состояние при нажатии */
+.button-yellow:active {
+    background: #CC9F00;
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(254, 201, 2, 0.3);
+}
+
+/* Состояние при фокусе */
+.button-yellow:focus {
+    outline: 2px solid #FEC902;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(254, 201, 2, 0.3);
+}
+
+.button-yellow:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+
+.button-yellow:focus-visible {
+    outline: 2px solid #FEC902;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(254, 201, 2, 0.3);
+}
+
+/* ===== TABLET: 768–1279px ===== */
+@media (max-width: 1279px) {
+  .foto-main,
+  .own-block,
+  .block-about-page {
+    padding: 0 30px;
+  }
+  
+  .block-about-page {
+    gap: 40px;
+  }
+
+  .button-yellow {
+    padding: 14px 35px;
+    font-size: 18px;
+    min-width: 180px;
+  }
+}
+
+/* ===== MOBILE: ≤767px ===== */
+@media (max-width: 767px) {
+  .foto-main,
+  .own-block,
+  .block-about-page {
+    padding: 0 20px;
+  }
+  
+  .own-block {
+    gap: 20px;
+  }
+  
+  .block-about-page {
+    gap: 30px;
+  }
+
+  .button-yellow {
+    padding: 12px 30px;
+    font-size: 16px;
+    min-width: 160px;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* ===== SMALL MOBILE: ≤479px ===== */
+@media (max-width: 479px) {
+  .foto-main,
+  .own-block,
+  .block-about-page {
+    padding: 0 15px;
+  }
+  
+  .own-block {
+    gap: 15px;
+  }
+  
+  .block-about-page {
+    gap: 25px;
+  }
+
+  .button-yellow {
+    padding: 12px 25px;
+    font-size: 16px;
+    min-width: 140px;
+    max-width: 100%;
+  }
 }

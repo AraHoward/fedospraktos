@@ -6,38 +6,113 @@
     gap: 10px;
     border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
 }
 
 .feedback h1{
     font-family: "Open Sans", serif;
     font-weight: 400;
     font-size: 24px;
+    line-height: 1.3;
 }
 
 .feedback h2{
     font-family: "Open Sans", serif;
     font-weight: 300;
     font-size: 20px;
+    line-height: 1.4;
 }
-
-// .main-text h1 {
-//     font-family: "Alegreya", serif;
-//     font-weight: 500;
-//     font-size: 64px;
-//     text-align: center;
-//     max-width: 1200px;
-// }
-
-// .ofter-text h2 {
-//     font-family: "Open Sans", serif;
-//     font-weight: 300;
-//     font-size: 36px;
-//     text-align: center;
-//     max-width: 1200px;
-// }
-
 
 .stats{
     display: flex;
     gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.stats svg {
+    width: 138px;
+    height: 25px;
+}
+
+/* ===== TABLET: 768–1279px ===== */
+@media (max-width: 1279px) {
+    .feedback {
+        padding: 18px;
+        gap: 8px;
+        border-radius: 18px;
+    }
+    
+    .feedback h1 {
+        font-size: 22px;
+    }
+    
+    .feedback h2 {
+        font-size: 18px;
+    }
+    
+    .stats {
+        gap: 8px;
+    }
+    
+    .stats svg {
+        width: 120px;
+        height: 22px;
+    }
+}
+
+/* ===== MOBILE: ≤767px ===== */
+@media (max-width: 767px) {
+    .feedback {
+        padding: 15px;
+        gap: 6px;
+        border-radius: 15px;
+    }
+    
+    .feedback h1 {
+        font-size: 20px;
+    }
+    
+    .feedback h2 {
+        font-size: 16px;
+    }
+    
+    .stats {
+        gap: 6px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .stats svg {
+        width: 110px;
+        height: 20px;
+    }
+}
+
+/* ===== SMALL MOBILE: ≤479px ===== */
+@media (max-width: 479px) {
+    .feedback {
+        padding: 12px;
+        gap: 5px;
+        border-radius: 12px;
+    }
+    
+    .feedback h1 {
+        font-size: 18px;
+    }
+    
+    .feedback h2 {
+        font-size: 14px;
+    }
+    
+    .stats {
+        gap: 5px;
+    }
+    
+    .stats svg {
+        width: 100px;
+        height: 18px;
+    }
 }

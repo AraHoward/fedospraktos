@@ -24,6 +24,7 @@
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
+    min-width: 200px;
 }
 
 /* Состояние при наведении */
@@ -47,4 +48,47 @@
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Убираем align-items и justify-content т.к. display: block */
+/* Для современных браузеров */
+.button-only:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+
+.button-only:focus-visible {
+    outline: 2px solid var(--background-button);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== TABLET: 768–1279px ===== */
+@media (max-width: 1279px) {
+    .button-only {
+        padding: 12px 35px;
+        font-size: 18px;
+        min-width: 180px;
+        max-width: 350px;
+    }
+}
+
+/* ===== MOBILE: ≤767px ===== */
+@media (max-width: 767px) {
+    .button-only {
+        padding: 10px 25px;
+        font-size: 16px;
+        min-width: 160px;
+        max-width: 300px;
+        border-radius: 12px;
+    }
+}
+
+/* ===== SMALL MOBILE: ≤479px ===== */
+@media (max-width: 479px) {
+    .button-only {
+        padding: 8px 20px;
+        font-size: 14px;
+        min-width: 140px;
+        max-width: 100%;
+        width: calc(100% - 40px);
+        border-radius: 10px;
+    }
+}

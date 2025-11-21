@@ -1,10 +1,12 @@
+/* ===== HEADER BASE STYLES ===== */
 header{
   background-color:white;
   height: 55px;
   display: flex;
-  padding: 10px 0; /* убрали боковые паддинги */
-  justify-content: center; /* центрируем контейнер */
+  padding: 10px 0;
+  justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .header-container {
@@ -12,7 +14,8 @@ header{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1240px; /* максимальная ширина */
+  max-width: 1240px;
+  padding: 0 20px; /* Базовые отступы */
 }
 
 .logo{
@@ -24,6 +27,11 @@ header{
   font-size: 32px;
 }
 
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .info{
   display: flex;
   align-items: center;
@@ -31,4 +39,243 @@ header{
   font-family: "Open Sans", serif;
   font-weight: 400;
   font-size: 20px;
+}
+
+.info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== BURGER MENU STYLES ===== */
+.burger-toggle {
+    display: none;
+}
+
+.burger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+.burger-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.burger-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* ===== TABLET: 768–1279px ===== */
+@media (max-width: 1279px) and (min-width: 768px) {
+  .header-container {
+    padding: 0 30px; /* Увеличиваем отступы на планшете */
+  }
+  
+  .logo {
+    font-size: 28px;
+    gap: 8px;
+  }
+  
+  .logo svg {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .info {
+    gap: 25px;
+    font-size: 18px;
+  }
+  
+  .burger-btn {
+    display: none; /* Скрываем бургер на планшетах */
+  }
+}
+
+/* ===== MOBILE: ≤767px ===== */
+@media (max-width: 767px) {
+  header {
+    height: 50px;
+    padding: 8px 0;
+  }
+  
+  .header-container {
+    padding: 0 20px; /* Отступы для мобильных */
+  }
+  
+  .logo {
+    font-size: 22px; /* Уменьшаем логотип */
+    gap: 8px;
+  }
+  
+  .logo svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .logo p {
+    font-size: 20px; /* Уменьшаем текст логотипа */
+  }
+  
+  /* Показываем кнопку бургер-меню */
+  .burger-btn {
+    display: flex;
+  }
+  
+  /* Скрываем обычное меню по умолчанию */
+  .info {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 25px 30px; /* Отступы внутри меню */
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Показываем все пункты меню в бургере */
+  .info p {
+    display: block !important;
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 0; /* Отступы между пунктами меню */
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0;
+  }
+  
+  .info a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+  }
+  
+  .info svg {
+    margin-top: 20px;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Когда чекбокс отмечен - показываем меню */
+  .burger-toggle:checked ~ .info {
+    right: 0;
+  }
+  
+  /* Показываем overlay когда меню открыто */
+  .burger-toggle:checked ~ .burger-overlay {
+    display: block;
+    opacity: 1;
+  }
+  
+  /* Анимация бургер-кнопки в крестик */
+  .burger-toggle:checked ~ .burger-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  .burger-toggle:checked ~ .burger-btn span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger-toggle:checked ~ .burger-btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  /* Скрываем обычное меню на мобильных */
+  .info p:nth-child(1),
+  .info p:nth-child(2),
+  .info p:nth-child(3),
+  .info p:nth-child(4) {
+    display: none;
+  }
+}
+
+/* ===== SMALL MOBILE: ≤479px ===== */
+@media (max-width: 479px) {
+  .header-container {
+    padding: 0 15px; /* Меньшие отступы на очень маленьких экранах */
+  }
+  
+  .logo {
+    font-size: 20px;
+    gap: 6px;
+  }
+  
+  .logo svg {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .logo p {
+    font-size: 18px;
+  }
+  
+  .info {
+    padding: 70px 20px 25px; /* Уменьшаем отступы внутри меню */
+    gap: 15px;
+  }
+  
+  .info p {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  
+  .info a {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  
+  .burger-btn {
+    width: 26px;
+    height: 18px;
+  }
+  
+  .burger-btn span {
+    height: 2.5px;
+  }
+}
+
+/* ===== LARGE DESKTOP: ≥1280px ===== */
+@media (min-width: 1280px) {
+  .header-container {
+    padding: 0 40px; /* Большие отступы на больших экранах */
+  }
+}
+
+/* ===== Обеспечиваем правильные отступы для body когда меню открыто ===== */
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden; /* Предотвращаем горизонтальный скролл */
+  }
+  
+  /* Предотвращаем скролл страницы когда меню открыто */
+  .burger-toggle:checked ~ .burger-overlay {
+    display: block;
+  }
 }
