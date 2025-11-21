@@ -151,8 +151,19 @@ a:focus-visible {
     box-shadow: 0 0 0 3px rgba(254, 201, 2, 0.3);
 }
 
-/* ===== TABLET: 768–1279px ===== */
-@media (max-width: 1279px) {
+/* ===== АДАПТИВНЫЕ СТИЛИ ДЛЯ КАРТОЧЕК INFO-FOTO ===== */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== TABLET: 1024–1279px ===== */
+@media (max-width: 1279px) and (min-width: 1024px) {
   .foto-main,
   .own-block,
   .block-about-page {
@@ -168,10 +179,63 @@ a:focus-visible {
     font-size: 18px;
     min-width: 180px;
   }
+  
+  .cards-container {
+    gap: 30px;
+    padding: 0 30px;
+  }
 }
 
-/* ===== MOBILE: ≤767px ===== */
-@media (max-width: 767px) {
+/* ===== TABLET: 900–1023px ===== */
+@media (max-width: 1023px) and (min-width: 900px) {
+  .foto-main,
+  .own-block,
+  .block-about-page {
+    padding: 0 30px;
+  }
+  
+  .block-about-page {
+    gap: 40px;
+  }
+
+  .button-yellow {
+    padding: 14px 35px;
+    font-size: 18px;
+    min-width: 180px;
+  }
+  
+  .cards-container {
+    gap: 25px;
+    padding: 0 30px;
+  }
+}
+
+/* ===== TABLET: 768–899px ===== */
+@media (max-width: 899px) and (min-width: 768px) {
+  .foto-main,
+  .own-block,
+  .block-about-page {
+    padding: 0 25px;
+  }
+  
+  .block-about-page {
+    gap: 40px;
+  }
+
+  .button-yellow {
+    padding: 14px 35px;
+    font-size: 18px;
+    min-width: 180px;
+  }
+  
+  .cards-container {
+    gap: 20px;
+    padding: 0 25px;
+  }
+}
+
+/* ===== MOBILE: 600–767px ===== */
+@media (max-width: 767px) and (min-width: 600px) {
   .foto-main,
   .own-block,
   .block-about-page {
@@ -192,6 +256,43 @@ a:focus-visible {
     min-width: 160px;
     width: 100%;
     max-width: 280px;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 20px;
+  }
+}
+
+/* ===== MOBILE: 480–599px ===== */
+@media (max-width: 599px) and (min-width: 480px) {
+  .foto-main,
+  .own-block,
+  .block-about-page {
+    padding: 0 20px;
+  }
+  
+  .own-block {
+    gap: 20px;
+  }
+  
+  .block-about-page {
+    gap: 30px;
+  }
+
+  .button-yellow {
+    padding: 12px 30px;
+    font-size: 16px;
+    min-width: 160px;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 20px;
   }
 }
 
@@ -216,5 +317,10 @@ a:focus-visible {
     font-size: 16px;
     min-width: 140px;
     max-width: 100%;
+  }
+  
+  .cards-container {
+    gap: 14px;
+    padding: 0 15px;
   }
 }

@@ -1,8 +1,13 @@
 .text-card{
     display: flex;
     gap: 30px;
-    width: 1240px;
+    width: 100%;
+    max-width: 1240px;
     justify-content: center;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+    align-items: flex-start;
 }
 
 .text-contact{
@@ -11,22 +16,32 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex: 1;
 }
 
 .text-contact div{
-    width: 555px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .text-contact h1{
     font-family: "Open Sans", serif;
     font-weight: 500;
     font-size: 24px;
+    margin: 0 0 5px 0;
+    width: 100%;
+    text-align: left;
 }
 
 .text-contact h2{
     font-family: "Open Sans", serif;
     font-weight: 300;
     font-size: 24px;
+    margin: 0 0 5px 0;
+    width: 100%;
+    text-align: left;
 }
 
 .text-contact h3{
@@ -34,4 +49,250 @@
     font-style: italic;
     font-weight: 300;
     font-size: 24px;
+    margin: 0;
+    color: #666;
+    width: 100%;
+    text-align: left;
+}
+
+.text-card > div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-card iframe {
+    width: 655px;
+    height: 393px;
+    transition: all 0.3s ease;
+}
+
+/* Large Desktop: ≥1440px */
+@media (min-width: 1440px) {
+    .text-card iframe {
+        width: 655px;
+        height: 393px;
+    }
+}
+
+/* Standard Desktop: 1280–1439px */
+@media (max-width: 1439px) and (min-width: 1280px) {
+    .text-card iframe {
+        width: calc(600px + (655 - 600) * (100vw - 1280px) / (1440 - 1280));
+        height: calc(360px + (393 - 360) * (100vw - 1280px) / (1440 - 1280));
+    }
+}
+
+/* Large Tablet: 1024–1279px */
+@media (max-width: 1279px) and (min-width: 1024px) {
+    .text-card{
+        gap: 25px;
+        // padding: 0 15px;
+        align-items: center;
+    }
+    
+    .text-contact{
+        text-align: start; /* Оставляем по левому краю на планшетах */
+    }
+    
+    .text-contact div{
+        align-items: flex-start;
+    }
+    
+    .text-contact h1,
+    .text-contact h2,
+    .text-contact h3 {
+        text-align: left; /* Оставляем по левому краю на планшетах */
+    }
+    
+    .text-card iframe {
+        width: calc(500px + (600 - 500) * (100vw - 1024px) / (1280 - 1024));
+        height: calc(300px + (360 - 300) * (100vw - 1024px) / (1280 - 1024));
+    }
+    
+    .text-contact h1{
+        font-size: calc(20px + (22 - 20) * (100vw - 1024px) / (1280 - 1024));
+    }
+    
+    .text-contact h2{
+        font-size: calc(18px + (20 - 18) * (100vw - 1024px) / (1280 - 1024));
+    }
+    
+    .text-contact h3{
+        font-size: calc(16px + (18 - 16) * (100vw - 1024px) / (1280 - 1024));
+    }
+}
+
+/* Medium Tablet: 768–1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .text-card{
+        gap: 20px;
+        // padding: 0 15px;
+        align-items: center;
+    }
+    
+    .text-contact{
+        text-align: start; /* Оставляем по левому краю на планшетах */
+    }
+    
+    .text-contact div{
+        align-items: flex-start;
+    }
+    
+    .text-contact h1,
+    .text-contact h2,
+    .text-contact h3 {
+        text-align: left; /* Оставляем по левому краю на планшетах */
+    }
+    
+    .text-card iframe {
+        width: calc(400px + (500 - 400) * (100vw - 768px) / (1024 - 768));
+        height: calc(240px + (300 - 240) * (100vw - 768px) / (1024 - 768));
+    }
+    
+    .text-contact h1{
+        font-size: calc(18px + (20 - 18) * (100vw - 768px) / (1024 - 768));
+    }
+    
+    .text-contact h2{
+        font-size: calc(16px + (18 - 16) * (100vw - 768px) / (1024 - 768));
+    }
+    
+    .text-contact h3{
+        font-size: calc(14px + (16 - 14) * (100vw - 768px) / (1024 - 768));
+    }
+}
+
+/* Mobile: 481–767px */
+@media (max-width: 767px) and (min-width: 481px) {
+    .text-card{
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+        align-items: center;
+    }
+    
+    .text-contact{
+        order: 1;
+        gap: 15px;
+        align-items: center;
+        text-align: center; /* Центрируем на мобильных */
+        width: 100%;
+    }
+    
+    .text-contact div{
+        align-items: center;
+    }
+    
+    .text-contact h1,
+    .text-contact h2,
+    .text-contact h3 {
+        text-align: center; /* Центрируем на мобильных */
+    }
+    
+    .text-card > div:last-child {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .text-card iframe {
+        width: 100%;
+        max-width: 500px;
+        height: calc(220px + (250 - 220) * (100vw - 481px) / (768 - 481));
+    }
+    
+    .text-contact h1{
+        font-size: calc(16px + (18 - 16) * (100vw - 481px) / (768 - 481));
+    }
+    
+    .text-contact h2{
+        font-size: calc(14px + (16 - 14) * (100vw - 481px) / (768 - 481));
+    }
+    
+    .text-contact h3{
+        font-size: calc(12px + (14 - 12) * (100vw - 481px) / (768 - 481));
+    }
+}
+
+/* Small Mobile: ≤480px */
+@media (max-width: 480px) {
+    .text-card{
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 8px;
+        align-items: center;
+    }
+    
+    .text-contact{
+        order: 1;
+        gap: 12px;
+        align-items: center;
+        text-align: center; /* Центрируем на мобильных */
+        width: 100%;
+    }
+    
+    .text-contact div{
+        align-items: center;
+    }
+    
+    .text-contact h1,
+    .text-contact h2,
+    .text-contact h3 {
+        text-align: center; /* Центрируем на мобильных */
+    }
+    
+    .text-card > div:last-child {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .text-card iframe {
+        width: 100%;
+        max-width: 400px;
+        height: 200px;
+    }
+    
+    .text-contact h1{
+        font-size: 16px;
+    }
+    
+    .text-contact h2{
+        font-size: 14px;
+    }
+    
+    .text-contact h3{
+        font-size: 12px;
+    }
+}
+
+/* Desktop: ≥1280px (базовые стили уже заданы) */
+@media (min-width: 1280px) {
+    .text-card{
+        padding: 0;
+    }
+    
+    .text-card > div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Обеспечиваем выравнивание по левому краю на десктопе */
+    .text-contact{
+        text-align: start;
+    }
+    
+    .text-contact div{
+        align-items: flex-start;
+    }
+    
+    .text-contact h1,
+    .text-contact h2,
+    .text-contact h3 {
+        text-align: left;
+    }
 }
