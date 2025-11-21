@@ -25,16 +25,49 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
+
+/* Эффект при наведении */
+.advantages-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(254, 201, 2, 0.3);
+    border: 2px solid #FEC902;
+}
+
+/* Анимация для иконки при наведении */
+.advantages-card:hover svg {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Эффект для текста при наведении */
+.advantages-card:hover h1 {
+    color: #FEC902;
+    transition: color 0.3s ease;
+}
+
 .advantages-card h1{
     font-family: "Alegreya", serif;
     font-weight: 500;
     font-size: 22px;
+    transition: color 0.3s ease;
 }
+
 .advantages-card h2{
     font-family: "Open Sans", serif;
     font-weight: 300;
     font-size: 16px;
+}
+
+/* Добавляем плавные переходы для всех анимируемых свойств */
+.advantages-card,
+.advantages-card svg,
+.advantages-card h1 {
+    transition: all 0.3s ease;
 }
 
 /* ===== TABLET: 768–1279px ===== */
@@ -56,6 +89,10 @@
         min-width: 300px;
         max-width: 350px;
         padding: 20px 15px;
+    }
+    
+    .advantages-card:hover {
+        transform: translateY(-3px);
     }
     
     .advantages-card h1 {
@@ -93,6 +130,21 @@
         gap: 8px;
     }
     
+    /* На мобильных отключаем эффекты наведения */
+    .advantages-card:hover {
+        transform: none;
+        box-shadow: none;
+        border: none;
+    }
+    
+    .advantages-card:hover svg {
+        transform: none;
+    }
+    
+    .advantages-card:hover h1 {
+        color: inherit;
+    }
+    
     .advantages-card h1 {
         font-size: 18px;
     }
@@ -127,6 +179,21 @@
         max-width: 100%;
         padding: 18px 12px;
         gap: 6px;
+    }
+    
+    /* На мобильных отключаем эффекты наведения */
+    .advantages-card:hover {
+        transform: none;
+        box-shadow: none;
+        border: none;
+    }
+    
+    .advantages-card:hover svg {
+        transform: none;
+    }
+    
+    .advantages-card:hover h1 {
+        color: inherit;
     }
     
     .advantages-card h1 {
